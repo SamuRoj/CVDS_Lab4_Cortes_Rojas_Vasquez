@@ -10,7 +10,11 @@ public class OriginalScore implements GameScore{
     @pos El puntaje minimo es de 0 puntos.
     */
     public int calculateScore (int correctCount, int incorrectCount){
-        return -1; //to do
+        int score = 100-incorrectCount*10;
+        if (score<0){
+            return 0;
+        }
+        return score;
     }
 
 }

@@ -1,5 +1,5 @@
 package hangman.model;
-
+import java.lang.Math;
 public class PowerBonusScore implements GameScore{
 
     /*
@@ -10,6 +10,12 @@ public class PowerBonusScore implements GameScore{
     @pos El puntaje minimo es de 0 puntos.
     */
     public int calculateScore (int correctCount, int incorrectCount){
-        return -1; //to do
+        int score= (int)(Math.pow(5,correctCount)) - incorrectCount*8;
+        if (score<0){
+            return 0;
+        } else if (score>500){
+            return 500;
+        }
+        return score;
     }
 }
