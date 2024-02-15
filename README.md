@@ -58,25 +58,26 @@ principio de inversión de dependencias:
 
 5. Actualice el archivo `pom.xml` e incluya las dependencias para la ultima versión de JUnit y la versión del compilador
    de Java a la versión 8.
+   
       <img width="498" alt="MicrosoftTeams-image" src="https://github.com/SamuRoj/CVDS_Lab4_Cortes_Rojas_Vasquez/assets/138069735/bf7d6c45-e46b-46bd-9ff7-45c6332fb291">
 
-6. Teniendo en cuenta dichas especificaciones, en la clase donde se
+7. Teniendo en cuenta dichas especificaciones, en la clase donde se
    implementarán las pruebas (GameScoreTest), en los
    comentarios iniciales, especifique las clases de equivalencia para
    las tres variantes de GameScore, e identifique
    condiciones de frontera.
 
-7. Para cada clase de equivalencia y condición de frontera, implemente
+8. Para cada clase de equivalencia y condición de frontera, implemente
    una prueba utilizando JUnit.
 
-8. Haga commit de lo realizado hasta ahora. Desde la terminal:
+9. Haga commit de lo realizado hasta ahora. Desde la terminal:
 
     ```sh		
     git add .			
     git commit -m "implementación pruebas"
     ```
 
-9. Realice la implementación de los 'cascarones' realizados anteriormente.
+10. Realice la implementación de los 'cascarones' realizados anteriormente.
    Asegúrese que todas las pruebas unitarias creadas en los puntos anteriores
    se ejecutan satisfactoriamente.
    <img width="867" alt="MicrosoftTeams-image (1)" src="https://github.com/SamuRoj/CVDS_Lab4_Cortes_Rojas_Vasquez/assets/138069735/8d572fd2-06eb-4a6c-bfcf-ae699ed7ae55">
