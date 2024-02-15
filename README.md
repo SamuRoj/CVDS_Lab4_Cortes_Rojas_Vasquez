@@ -58,6 +58,7 @@ principio de inversión de dependencias:
 
 5. Actualice el archivo `pom.xml` e incluya las dependencias para la ultima versión de JUnit y la versión del compilador
    de Java a la versión 8.
+      <img width="498" alt="MicrosoftTeams-image" src="https://github.com/SamuRoj/CVDS_Lab4_Cortes_Rojas_Vasquez/assets/138069735/bf7d6c45-e46b-46bd-9ff7-45c6332fb291">
 
 6. Teniendo en cuenta dichas especificaciones, en la clase donde se
    implementarán las pruebas (GameScoreTest), en los
@@ -78,15 +79,17 @@ principio de inversión de dependencias:
 9. Realice la implementación de los 'cascarones' realizados anteriormente.
    Asegúrese que todas las pruebas unitarias creadas en los puntos anteriores
    se ejecutan satisfactoriamente.
+   <img width="867" alt="MicrosoftTeams-image (1)" src="https://github.com/SamuRoj/CVDS_Lab4_Cortes_Rojas_Vasquez/assets/138069735/8d572fd2-06eb-4a6c-bfcf-ae699ed7ae55">
 
-10. Al finalizar haga un nuevo commit:
+
+11. Al finalizar haga un nuevo commit:
 
     ```sh		
     git add .			
     git commit -m "implementación del modelo"
     ```
 
-11. Para sincronizar el avance en el respositorio y NO PERDER el trabajo, use
+12. Para sincronizar el avance en el respositorio y NO PERDER el trabajo, use
     el comando de GIT para enviar los cambios:
 
     ```sh
@@ -125,3 +128,14 @@ Incorpore el Contenedor Liviano Guice dentro del proyecto:
     * etc...
 * Para lo anterior, [puede basarse en el ejemplo dado como
   referencia](https://github.com/PDSW-ECI/LightweighContainers_DepenendecyInjectionIntro-WordProcessor).
+
+
+## Construido con
+* Java 21.0.1
+* Maven 3.9.6
+  
+## Autores
+* __Alexandra Cortes Tovar__
+* __Samuel Rojas Yopasa__
+* __Juan Sebastián Vásquez Vega__ 
+
