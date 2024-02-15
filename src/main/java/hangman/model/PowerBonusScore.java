@@ -1,6 +1,6 @@
 package hangman.model;
 
-public class PowerScore implements GameScore{
+public class PowerBonusScore implements GameScore{
 
     /*
     Metodo que calcula el puntaje en el esquema PowerBonusScore.
@@ -10,6 +10,6 @@ public class PowerScore implements GameScore{
     @pos El puntaje minimo es de 0 puntos.
     */
     public int calculateScore (int correctCount, int incorrectCount){
-        return 0; //to do
+        return -1; //to do
     }
 }

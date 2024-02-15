@@ -9,6 +9,6 @@ public class BonusScore implements GameScore{
     @pos El puntaje minimo es de 0 puntos.
     */
     public int calculateScore (int correctCount, int incorrectCount){
-        return 0; //to do
+        return -1; //to do
     }
 }
