@@ -27,6 +27,8 @@ public class GameModel {
     private int correctCount;
     private LocalDateTime dateTime;
     private int gameScore;
+
+    private GameScore aux;
     private int[] lettersUsed;
 
 
@@ -42,6 +44,7 @@ public class GameModel {
         this.dictionary = dictionary;
         randomWord = selectRandomWord();
         randomWordCharArray = randomWord.toCharArray();
+        aux = new BonusScore();
         incorrectCount = 0;
         correctCount = 0;
         gameScore = 100;
@@ -53,6 +56,7 @@ public class GameModel {
     public void reset() {
         randomWord = selectRandomWord();
         randomWordCharArray = randomWord.toCharArray();
+        aux = new BonusScore();
         incorrectCount = 0;
         correctCount = 0;
         gameScore = 100;
@@ -77,10 +81,10 @@ public class GameModel {
         }
         if (positions.size() == 0) {
             incorrectCount++;
-            gameScore -= 10;
         } else {
             correctCount += positions.size();
         }
+        gameScore = aux.calculateScore(correctCount, incorrectCount);
         return positions;
 
     }
