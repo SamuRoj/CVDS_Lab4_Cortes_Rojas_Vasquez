@@ -27,8 +27,6 @@ public class GameModel {
     private int correctCount;
     private LocalDateTime dateTime;
     private int gameScore;
-
-    private GameScore aux;
     private int[] lettersUsed;
 
 
@@ -37,17 +35,18 @@ public class GameModel {
     private Scanner scan;
     private String randomWord;
     private char[] randomWordCharArray;
+    private GameScore typeGame;
 
 
-    public GameModel(HangmanDictionary dictionary) {
+    public GameModel(HangmanDictionary dictionary, GameScore typeGame) {
         //this.dictionary = new EnglishDictionaryDataSource();
         this.dictionary = dictionary;
+        this.typeGame = typeGame;
         randomWord = selectRandomWord();
         randomWordCharArray = randomWord.toCharArray();
-        aux = new BonusScore();
         incorrectCount = 0;
         correctCount = 0;
-        gameScore = 100;
+        gameScore = typeGame.initialScore();
 
     }
 
@@ -56,10 +55,9 @@ public class GameModel {
     public void reset() {
         randomWord = selectRandomWord();
         randomWordCharArray = randomWord.toCharArray();
-        aux = new BonusScore();
         incorrectCount = 0;
         correctCount = 0;
-        gameScore = 100;
+        gameScore = typeGame.initialScore();
     }
 
     //setDateTime
@@ -81,10 +79,20 @@ public class GameModel {
         }
         if (positions.size() == 0) {
             incorrectCount++;
+            if(typeGame instanceof PowerBonusScore){
+                gameScore = typeGame.calculateScore(-1, incorrectCount);
+            }
         } else {
             correctCount += positions.size();
+            if(typeGame instanceof PowerBonusScore){
+                for (int pos :positions){
+                    gameScore = typeGame.calculateScore(pos, incorrectCount);
+                }
+            }
         }
-        gameScore = aux.calculateScore(correctCount, incorrectCount);
+        if(!(typeGame instanceof PowerBonusScore)){
+            gameScore = typeGame.calculateScore(correctCount, incorrectCount);
+        }
         return positions;
 
     }

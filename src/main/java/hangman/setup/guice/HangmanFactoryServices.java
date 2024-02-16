@@ -7,6 +7,8 @@ package hangman.setup.guice;
 
 import hangman.model.*;
 import hangman.model.dictionary.*;
+import hangman.view.HangmanColoridoPanel;
+import hangman.view.HangmanNoviolentoPanel;
 import hangman.view.HangmanPanel;
 import hangman.view.HangmanStickmanPanel;
 
